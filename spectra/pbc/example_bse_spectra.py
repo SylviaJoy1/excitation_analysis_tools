@@ -9,6 +9,11 @@ from kbse import BSE
 import pbc_spectra
 from pyscf.pbc.scf import chkfile
 
+#WARNING!
+#PySCF TDA gives eigenvector that is complex conj of what it should be for spectra
+#Until this is fixed, you will need to manually take the complex conj of the eigenvector
+#My BSE code gives the correction conjugation
+
 import sys
 sys_args =  sys.argv[1:]
 #fnl = str(sys_args[2])
